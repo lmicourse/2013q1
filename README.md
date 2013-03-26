@@ -36,4 +36,7 @@ Mivel C++ alapokról nem szeretnénk beszélni, ezért elvárás, hogy tudj egye
 ##### Elérhető lesz a tanfolyam anyaga az előadások után? #####
 Igen, itt. Videót nem készítünk, tehát az nem lesz elérhető, de a prezik, dokumentációk, kódok fel fognak kerülni ide.   
 
+##### Mikor tudom meg, hogy részt vehetek-e a tanfolyamon? #####
+A beugró feladat kitöltési határideje Március 26 este. Március 27-én napközben mindenkit email-ben értesítünk.   
+
 ## To be continued... :) ##
