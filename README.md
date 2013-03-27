@@ -37,6 +37,6 @@ Mivel C++ alapokról nem szeretnénk beszélni, ezért elvárás, hogy tudj egye
 Igen, itt. Videót nem készítünk, tehát az nem lesz elérhető, de a prezik, dokumentációk, kódok fel fognak kerülni ide.   
 
 ##### Mikor tudom meg, hogy részt vehetek-e a tanfolyamon? #####
-A beugró feladat kitöltési határideje Március 26 este. Március 27-én napközben mindenkit email-ben értesítünk.   
+A beugró feladat kitöltési határidejét április 2-ra módosítottuk. Azoknak, akik már kitöltötték a beugró feladatot, kiküldtük a levelet.   
 
 ## To be continued... :) ##
