@@ -13,12 +13,23 @@ set(LIBDIR ${PROJECT_SOURCE_DIR}/lib)
 
 include_directories( ${LIBDIR} )
 
-set(COMMON_SOURCES
+add_library(SoundStuffLib
     ${SRCDIR}/morsetext.cpp
     ${SRCDIR}/SoundSample.cpp
+)
+
+add_library(FFTLib
     ${LIBDIR}/fft/fft.cpp
     ${LIBDIR}/fft/complex.cpp
 )
 
-add_executable(SoundStuff ${SRCDIR}/main.cpp ${COMMON_SOURCES})
-add_executable(SoundTest  ${SRCDIR}/main-1.cpp ${COMMON_SOURCES})
+add_executable(SoundStuff ${SRCDIR}/main.cpp)
+add_executable(SoundTest  ${SRCDIR}/main-1.cpp)
+
+set(LIBS
+    SoundStuffLib # Order matters!
+    FFTLib
+)
+
+target_link_libraries(SoundStuff ${LIBS})
+target_link_libraries(SoundTest ${LIBS})
