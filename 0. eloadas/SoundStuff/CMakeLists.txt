@@ -6,6 +6,10 @@ project(SoundStuff)
 if(UNIX)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++11")
 endif()
+
+if(APPLE)
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
+endif()
 # MSVC does not require any special flags
 
 set(SRCDIR ${PROJECT_SOURCE_DIR}/src)
