@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F33D191E170C1CCD00A28CB6 /* libmorse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F33D1914170C1CAE00A28CB6 /* libmorse.a */; };
+		F33D191F170C1D3100A28CB6 /* complex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3D466F4170C177700FD448A /* complex.cpp */; };
+		F33D1920170C1D3100A28CB6 /* fft.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3D466F6170C177700FD448A /* fft.cpp */; };
+		F33D1921170C1D3100A28CB6 /* morsetext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3D466E9170C176900FD448A /* morsetext.cpp */; };
+		F33D1922170C1D3100A28CB6 /* SoundSample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3D466EB170C176900FD448A /* SoundSample.cpp */; };
+		F3D466EF170C176900FD448A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F3D466E8170C176900FD448A /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F33D191C170C1CCA00A28CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3D466D2170C16EA00FD448A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F33D1913170C1CAE00A28CB6;
+			remoteInfo = morse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F3D466DA170C173900FD448A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F33D1914170C1CAE00A28CB6 /* libmorse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmorse.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D466DC170C173900FD448A /* SoundStuff */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SoundStuff; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D466E8170C176900FD448A /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F3D466E9170C176900FD448A /* morsetext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = morsetext.cpp; sourceTree = "<group>"; };
+		F3D466EA170C176900FD448A /* morsetext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = morsetext.h; sourceTree = "<group>"; };
+		F3D466EB170C176900FD448A /* SoundSample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SoundSample.cpp; sourceTree = "<group>"; };
+		F3D466EC170C176900FD448A /* SoundSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundSample.h; sourceTree = "<group>"; };
+		F3D466ED170C176900FD448A /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		F3D466F4170C177700FD448A /* complex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = complex.cpp; sourceTree = "<group>"; };
+		F3D466F5170C177700FD448A /* complex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complex.h; sourceTree = "<group>"; };
+		F3D466F6170C177700FD448A /* fft.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fft.cpp; sourceTree = "<group>"; };
+		F3D466F7170C177700FD448A /* fft.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fft.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F33D1911170C1CAE00A28CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D466D9170C173900FD448A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33D191E170C1CCD00A28CB6 /* libmorse.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3D466D1170C16EA00FD448A = {
+			isa = PBXGroup;
+			children = (
+				F3D466F2170C177700FD448A /* lib */,
+				F3D466E6170C176900FD448A /* src */,
+				F3D466DD170C173900FD448A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3D466DD170C173900FD448A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3D466DC170C173900FD448A /* SoundStuff */,
+				F33D1914170C1CAE00A28CB6 /* libmorse.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3D466E6170C176900FD448A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F3D466E8170C176900FD448A /* main.cpp */,
+				F3D466E9170C176900FD448A /* morsetext.cpp */,
+				F3D466EA170C176900FD448A /* morsetext.h */,
+				F3D466EB170C176900FD448A /* SoundSample.cpp */,
+				F3D466EC170C176900FD448A /* SoundSample.h */,
+				F3D466ED170C176900FD448A /* types.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F3D466F2170C177700FD448A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F3D466F3170C177700FD448A /* fft */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		F3D466F3170C177700FD448A /* fft */ = {
+			isa = PBXGroup;
+			children = (
+				F3D466F4170C177700FD448A /* complex.cpp */,
+				F3D466F5170C177700FD448A /* complex.h */,
+				F3D466F6170C177700FD448A /* fft.cpp */,
+				F3D466F7170C177700FD448A /* fft.h */,
+			);
+			path = fft;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F33D1912170C1CAE00A28CB6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F33D1913170C1CAE00A28CB6 /* morse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F33D1915170C1CAE00A28CB6 /* Build configuration list for PBXNativeTarget "morse" */;
+			buildPhases = (
+				F33D1910170C1CAE00A28CB6 /* Sources */,
+				F33D1911170C1CAE00A28CB6 /* Frameworks */,
+				F33D1912170C1CAE00A28CB6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = morse;
+			productName = morse;
+			productReference = F33D1914170C1CAE00A28CB6 /* libmorse.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F3D466DB170C173900FD448A /* SoundStuff */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3D466E5170C173900FD448A /* Build configuration list for PBXNativeTarget "SoundStuff" */;
+			buildPhases = (
+				F3D466D8170C173900FD448A /* Sources */,
+				F3D466D9170C173900FD448A /* Frameworks */,
+				F3D466DA170C173900FD448A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F33D191D170C1CCA00A28CB6 /* PBXTargetDependency */,
+			);
+			name = SoundStuff;
+			productName = SoundStuff;
+			productReference = F3D466DC170C173900FD448A /* SoundStuff */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3D466D2170C16EA00FD448A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = F3D466D5170C16EA00FD448A /* Build configuration list for PBXProject "SoundStuff" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F3D466D1170C16EA00FD448A;
+			productRefGroup = F3D466DD170C173900FD448A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3D466DB170C173900FD448A /* SoundStuff */,
+				F33D1913170C1CAE00A28CB6 /* morse */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F33D1910170C1CAE00A28CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F33D191F170C1D3100A28CB6 /* complex.cpp in Sources */,
+				F33D1920170C1D3100A28CB6 /* fft.cpp in Sources */,
+				F33D1921170C1D3100A28CB6 /* morsetext.cpp in Sources */,
+				F33D1922170C1D3100A28CB6 /* SoundSample.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3D466D8170C173900FD448A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3D466EF170C176900FD448A /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F33D191D170C1CCA00A28CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F33D1913170C1CAE00A28CB6 /* morse */;
+			targetProxy = F33D191C170C1CCA00A28CB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F33D1916170C1CAE00A28CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F33D1917170C1CAE00A28CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F3D466D6170C16EA00FD448A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/lib\"";
+			};
+			name = Debug;
+		};
+		F3D466D7170C16EA00FD448A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/lib\"";
+			};
+			name = Release;
+		};
+		F3D466E3170C173900FD448A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F3D466E4170C173900FD448A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F33D1915170C1CAE00A28CB6 /* Build configuration list for PBXNativeTarget "morse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F33D1916170C1CAE00A28CB6 /* Debug */,
+				F33D1917170C1CAE00A28CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3D466D5170C16EA00FD448A /* Build configuration list for PBXProject "SoundStuff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D466D6170C16EA00FD448A /* Debug */,
+				F3D466D7170C16EA00FD448A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3D466E5170C173900FD448A /* Build configuration list for PBXNativeTarget "SoundStuff" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3D466E3170C173900FD448A /* Debug */,
+				F3D466E4170C173900FD448A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3D466D2170C16EA00FD448A /* Project object */;
+}
