@@ -1,3 +1,12 @@
+
+Uptdate:
+======
+
+Hogy megoldjuk a fejlesztő környezet hiányát összeállítottunk egy image fájlt, amiről bebootolhatók az informatoriumban a gépek.
+[Leírás](https://github.com/lmicourse/2013q1/wiki/LMI-Course-Live-Ubuntu)
+
+Azoknak akik nem ezt az image-et akarják használni lesz kint egy leírás ma vagy holnap.
+
 LogMeIn C++ fejlesztői tanfolyam
 ======
 Avagy ami az egyetemi oktatásból kimaradt
