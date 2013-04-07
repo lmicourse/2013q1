@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,3 +29,10 @@ HEADERS  += GuiApplication.h \
     PingnetNetworkAdapater.h
 
 FORMS    += GuiApplication.ui
+
+INCLUDEPATH += $$PWD/../../include
+
+LIBS += -L$$OUT_PWD/../QtNet/ -lQtNet
+
+INCLUDEPATH += $$PWD/../QtNet
+DEPENDPATH += $$PWD/../QtNet

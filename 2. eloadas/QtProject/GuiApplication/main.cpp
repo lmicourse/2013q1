@@ -3,7 +3,8 @@
 #include "PingnetNetworkAdapater.h"
 #include "User.h"
 #include "Message.h"
-#include "BoostNet.h"
+//#include "BoostNet.h"
+#include "QtNet.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
@@ -13,10 +14,11 @@ int main(int argc, char *argv[])
 
     QApplication a(argc, argv);
 
-    LoopbackNetworkAdapter adapter;
+    //LoopbackNetworkAdapter adapter;
 
     //BoostNet net("127.0.0.1", 50002);
-    //PingnetNetworkAdapater adapter(net);
+    QtNet net("127.0.0.1", 50002);
+    PingnetNetworkAdapater adapter(net);
 
     INetworkAdapter& iAdapter = adapter;
 

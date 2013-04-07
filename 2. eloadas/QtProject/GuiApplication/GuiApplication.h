@@ -15,7 +15,7 @@ class GuiApplication;
 class GuiApplication : public QWidget
 {
     Q_OBJECT
-    
+
 public:
     explicit GuiApplication(const User& user, INetworkAdapter& networkAdapter, QWidget *parent = 0);
     ~GuiApplication();
