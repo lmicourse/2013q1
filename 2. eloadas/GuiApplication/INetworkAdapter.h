@@ -12,13 +12,18 @@ class INetworkAdapter : public QObject
 public:
     virtual ~INetworkAdapter() {}
 
+public slots:
+    virtual void login(const User &user) = 0;
+    virtual void logout(const User& user) = 0;
+    virtual void sendMessage(const Message& message) = 0;
+
 signals:
-    void login(const User& user);
-    void logout(const User& user);
+    void loggedIn(const User& user);
+    void loggedOut(const User& user);
     void messageReceived(const Message& message);
 
-private:
-    INetworkAdapter();
+protected:
+    INetworkAdapter() {}
 };
 
 #endif // INETWORKADAPTER_H

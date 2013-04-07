@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         GuiApplication.cpp \
     User.cpp \
-    Message.cpp
+    Message.cpp \
+    LoopbackNetworkAdapter.cpp
 
 HEADERS  += GuiApplication.h \
     INetworkAdapter.h \
     User.h \
-    Message.h
+    Message.h \
+    LoopbackNetworkAdapter.h
 
 FORMS    += GuiApplication.ui

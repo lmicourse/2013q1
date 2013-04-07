@@ -17,33 +17,43 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QTextEdit" name="textEdit">
+      <widget class="QTextEdit" name="chatroom">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="message"/>
      </item>
     </layout>
    </item>
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QListWidget" name="listWidget">
+      <widget class="QListWidget" name="userList">
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="connectButton">
+       <property name="text">
+        <string>Connect</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="sendMessageButton">
        <property name="focusPolicy">
         <enum>Qt::WheelFocus</enum>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string>Send</string>
        </property>
       </widget>
      </item>
