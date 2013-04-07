@@ -13,8 +13,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        GuiApplication.cpp
+        GuiApplication.cpp \
+    User.cpp \
+    Message.cpp
 
-HEADERS  += GuiApplication.h
+HEADERS  += GuiApplication.h \
+    INetworkAdapter.h \
+    User.h \
+    Message.h
 
 FORMS    += GuiApplication.ui
