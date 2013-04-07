@@ -16,12 +16,14 @@ SOURCES += main.cpp\
         GuiApplication.cpp \
     User.cpp \
     Message.cpp \
-    LoopbackNetworkAdapter.cpp
+    LoopbackNetworkAdapter.cpp \
+    UserListModel.cpp
 
 HEADERS  += GuiApplication.h \
     INetworkAdapter.h \
     User.h \
     Message.h \
-    LoopbackNetworkAdapter.h
+    LoopbackNetworkAdapter.h \
+    UserListModel.h
 
 FORMS    += GuiApplication.ui

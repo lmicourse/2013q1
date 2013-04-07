@@ -14,3 +14,8 @@ QString User::name() const
 {
     return m_name;
 }
+
+bool User::operator ==(const User &other) const
+{
+    return id() == other.id();
+}

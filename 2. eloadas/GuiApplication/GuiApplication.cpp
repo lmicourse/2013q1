@@ -8,9 +8,11 @@ GuiApplication::GuiApplication(const User &user, INetworkAdapter &networkAdapter
     , ui(new Ui::GuiApplication)
     , m_user(user)
     , m_networkAdapter(networkAdapter)
+    , m_userList()
 
 {
     ui->setupUi(this);
+    ui->userList->setModel(&m_userList);
     connectNetworkSignals();
 }
 
@@ -28,16 +30,28 @@ void GuiApplication::connectNetworkSignals()
     connect(&m_networkAdapter, SIGNAL(loggedOut(User)), this, SLOT(onUserLogout(User)));
 }
 
+void GuiApplication::handleUserChange(const User &user, bool login)
+{
+    QString loginText = QString("%1 is logged %2 ...").arg(user.name()).arg(login ? "in" : "out");
+    if (login)
+    {
+        m_userList.addUser(user);
+    }
+    else
+    {
+        m_userList.removeUser(user);
+    }
+    ui->chatroom->append(loginText);
+}
+
 void GuiApplication::onUserLogin(const User &user)
 {
-    QString loginText = QString("%1 is logged in ...").arg(user.name());
-    ui->chatroom->append(loginText);
+    handleUserChange(user, true);
 }
 
 void GuiApplication::onUserLogout(const User &user)
 {
-    QString logoutText = QString("%1 is logged out ...").arg(user.name());
-    ui->chatroom->append(logoutText);
+    handleUserChange(user, false);
 }
 
 void GuiApplication::onMessageReceived(const Message &message)

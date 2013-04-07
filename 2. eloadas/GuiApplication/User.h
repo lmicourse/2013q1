@@ -12,6 +12,8 @@ public:
     int id() const;
     QString name() const;
 
+    bool operator==(const User& other) const;
+
 private:
     int m_id;
     QString m_name;

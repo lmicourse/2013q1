@@ -2,6 +2,7 @@
 #define GUIAPPLICATION_H
 
 #include <QWidget>
+#include <UserListModel.h>
 
 class INetworkAdapter;
 class User;
@@ -34,11 +35,13 @@ private slots:
 
 private:
     void connectNetworkSignals();
+    void handleUserChange(const User& user, bool login);
 
 private:
     Ui::GuiApplication *ui;
     const User&         m_user;
     INetworkAdapter&    m_networkAdapter;
+    UserListModel       m_userList;
 
 };
 
