@@ -4,7 +4,9 @@ Update:
 Hogy megoldjuk a fejlesztő környezet hiányát összeállítottunk egy image fájlt, amiről bebootolhatók az informatoriumban a gépek.
 [Link és leírás](https://github.com/lmicourse/2013q1/wiki/LMI-Course-Live-Ubuntu)
 
-Azoknak akik nem ezt az image-et akarják használni lesz kint egy leírás ma vagy holnap.
+Saját gépet használóknak:
+https://github.com/lmicourse/2013q1/wiki/Fejleszt%C5%91i-k%C3%B6rnyezet
+Röviden: Kell Qt, Qt-creator, boost development fileok
 
 LogMeIn C++ fejlesztői tanfolyam
 ======
