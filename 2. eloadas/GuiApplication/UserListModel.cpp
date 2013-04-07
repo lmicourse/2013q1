@@ -7,7 +7,7 @@ UserListModel::UserListModel(QObject *parent)
 
 int UserListModel::rowCount(const QModelIndex &parent) const
 {
-    m_elements.size();
+    return m_elements.size();
 }
 
 QVariant UserListModel::data(const QModelIndex &index, int role) const

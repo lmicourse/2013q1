@@ -1,5 +1,6 @@
 #include "INetworkAdapter.h"
 #include "User.h"
+#include "Message.h"
 #include "GuiApplication.h"
 #include "ui_GuiApplication.h"
 
@@ -28,6 +29,8 @@ void GuiApplication::connectNetworkSignals()
 
     connect(&m_networkAdapter, SIGNAL(loggedIn(User)), this, SLOT(onUserLogin(User)));
     connect(&m_networkAdapter, SIGNAL(loggedOut(User)), this, SLOT(onUserLogout(User)));
+
+    //TODO message
 }
 
 void GuiApplication::handleUserChange(const User &user, bool login)
@@ -56,6 +59,7 @@ void GuiApplication::onUserLogout(const User &user)
 
 void GuiApplication::onMessageReceived(const Message &message)
 {
+    //TODO
 }
 
 void GuiApplication::on_connectButton_clicked(bool checked)

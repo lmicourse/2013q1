@@ -1,13 +1,18 @@
 #include "Message.h"
 
-Message::Message(int userId, QString message)
-    : m_userId(userId)
+Message::Message()
+    : m_user()
+    , m_message()
+{}
+
+Message::Message(const User &user, QString message)
+    : m_user(user)
     , m_message(message)
 {}
 
-int Message::userId() const
+const User& Message::user() const
 {
-    return m_userId;
+    return m_user;
 }
 
 QString Message::message() const

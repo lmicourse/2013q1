@@ -8,6 +8,9 @@ class LoopbackNetworkAdapter : public INetworkAdapter
 public:
     LoopbackNetworkAdapter();
 
+private slots:
+    virtual void maintenance() {};
+
 public slots:
     virtual void login(const User &user);
     virtual void logout(const User &user);

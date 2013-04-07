@@ -17,13 +17,15 @@ SOURCES += main.cpp\
     User.cpp \
     Message.cpp \
     LoopbackNetworkAdapter.cpp \
-    UserListModel.cpp
+    UserListModel.cpp \
+    PingnetNetworkAdapater.cpp
 
 HEADERS  += GuiApplication.h \
     INetworkAdapter.h \
     User.h \
     Message.h \
     LoopbackNetworkAdapter.h \
-    UserListModel.h
+    UserListModel.h \
+    PingnetNetworkAdapater.h
 
 FORMS    += GuiApplication.ui

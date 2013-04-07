@@ -1,19 +1,24 @@
 #ifndef MESSAGE_H
 #define MESSAGE_H
 
+#include <QMetaType>
 #include <QString>
+#include "User.h"
 
 class Message
 {
 public:
-    Message(int userId, QString message);
+    Message();
+    Message(const User& user, QString message);
 
-    int userId() const;
+    const User &user() const;
     QString message() const;
 
 private:
-    int m_userId;
+    User m_user;
     QString m_message;
 };
+
+Q_DECLARE_METATYPE(Message)
 
 #endif // MESSAGE_H

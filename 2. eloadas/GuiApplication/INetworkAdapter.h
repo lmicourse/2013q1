@@ -17,6 +17,9 @@ public slots:
     virtual void logout(const User& user) = 0;
     virtual void sendMessage(const Message& message) = 0;
 
+protected slots:
+    virtual void maintenance() = 0;
+
 signals:
     void loggedIn(const User& user);
     void loggedOut(const User& user);

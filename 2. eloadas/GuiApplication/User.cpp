@@ -1,5 +1,10 @@
 #include "User.h"
 
+User::User()
+    : m_id(-1)
+    , m_name("Unknown")
+{}
+
 User::User(int id, QString name)
     : m_id(id)
     , m_name(name)
@@ -18,4 +23,9 @@ QString User::name() const
 bool User::operator ==(const User &other) const
 {
     return id() == other.id();
+}
+
+bool User::operator <(const User &other) const
+{
+    return name() < other.name();
 }
