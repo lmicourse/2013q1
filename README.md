@@ -6,7 +6,7 @@ Hogy megoldjuk a fejlesztő környezet hiányát összeállítottunk egy image f
 
 Saját gépet használóknak:
 https://github.com/lmicourse/2013q1/wiki/Fejleszt%C5%91i-k%C3%B6rnyezet
-Röviden: Kell Qt, Qt-creator, boost development fileok
+Röviden: Kell Qt, Qt-creator, boost development fileok. Ha valaki nem akarja az osszeset feltenni, mert sok, akkor a boost-system és boost-thread
 
 LogMeIn C++ fejlesztői tanfolyam
 ======
