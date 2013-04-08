@@ -25,9 +25,15 @@ void ConsoleApplication::start() {
     cout << "Starting threads" << endl;
 
 	// TODO: Start threads
-    //pingThread = ...
+    running = true;
+    pingThread = new boost::thread(
+        boost::bind(
+            &ConsoleApplication::pingThreadFunc,
+            this
+            )
+        );
     //maintenanceThread = ...
-	running = true;
+
 
     // Main loop
 	string message;
