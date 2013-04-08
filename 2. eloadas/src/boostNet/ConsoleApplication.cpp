@@ -27,8 +27,6 @@ void ConsoleApplication::start() {
 	// TODO: Start threads
     //pingThread = ...
     //maintenanceThread = ...
-    pingThread          = new boost::thread(boost::bind(&ConsoleApplication::pingThreadFunc, this));    //REMOVE
-    maintenanceThread   = new boost::thread(boost::bind(&ConsoleApplication::maintenanceFunc, this));   //REMOVE
 	running = true;
 
     // Main loop
@@ -54,8 +52,6 @@ void ConsoleApplication::stop() {
     netIface->close();
 	cout << "Waiting for the threads to exit" << endl;
 	// TODO: Wait for threads
-    pingThread -> join();           //REMOVE
-    maintenanceThread -> join();    //REMOVE
 }
 
 void ConsoleApplication::onMessage(int userId, string message) {

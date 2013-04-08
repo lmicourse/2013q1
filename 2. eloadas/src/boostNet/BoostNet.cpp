@@ -45,22 +45,17 @@ void BoostNet::connect() {
 	// Connect to the server
 	cout << "Connecting..." << endl;
 	//TODO: Do connection
-    boost::asio::ip::address address = boost::asio::ip::address::from_string(serverIP.c_str()); // REMOVE
-    tcp::endpoint socketAddress(address, serverPort); // REMOVE
-    socket.connect(socketAddress); //REMOVE
 
 	// Start the thread
 	cout << "Starting receiver thread ..." << endl;
     running = true;
 	//TODO: Start receiver thread
-	receiveThread = new boost::thread(boost::bind(&BoostNet::receiveThreadFunc, this)); // REMOVE
 }
 
 void BoostNet::close() {
     running = false;
     socket.close(); // This would be much more elegant with async operation and cancel
 	// TODO wait for the thread
-    receiveThread->join(); // REMOVE
 }
 
 void BoostNet::receiveThreadFunc() {
