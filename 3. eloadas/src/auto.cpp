@@ -3,14 +3,24 @@
 
 class A
 {
+public:
+    A() : m_a(0) {}
+//    A(auto i) : m_a(i) {} // compiler error
+    int getA() { return m_a; }
 private:
    // auto m_a = 1; // compile error!
+    int m_a;
 };
 
 void f(int)
 {
     printf("%s\n", "f(int)");
 }
+
+// void f(auto) compiler error
+// {
+//     printf("%s\n", "f(auto)");
+// }
 
 void g(int)
 {
@@ -63,6 +73,4 @@ int main()
         printf("%d, ", *iter);
     }
     printf("\n");
-
-
 }
