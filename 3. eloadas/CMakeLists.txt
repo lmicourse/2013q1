@@ -14,3 +14,4 @@ set(SRC_DIR ${PROJECT_SOURCE_DIR}/src)
 
 
 add_executable(nullptr ${SRC_DIR}/nullptr.cpp)
+add_executable(auto ${SRC_DIR}/auto.cpp)
