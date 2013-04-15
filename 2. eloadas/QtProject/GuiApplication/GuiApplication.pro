@@ -32,7 +32,10 @@ FORMS    += GuiApplication.ui
 
 INCLUDEPATH += $$PWD/../../include
 
-LIBS += -L$$OUT_PWD/../QtNet/ -lQtNet
+
+win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../QtNet/release/ -lQtNet
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../QtNet/debug/ -lQtNet
+else:unix: LIBS += -L$$OUT_PWD/../QtNet/ -lQtNet
 
 INCLUDEPATH += $$PWD/../QtNet
 DEPENDPATH += $$PWD/../QtNet
