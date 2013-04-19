@@ -1,0 +1,63 @@
+#include "Options.h"
+
+Options::Options(const std::string& options)
+{
+    if (options.empty())
+    {
+        return;
+    }
+
+
+    std::string key("");
+    std::string value("");
+    std::string::size_type spacePos = 0;
+    std::string::size_type wordPos  = 0;
+
+    for(;;)
+    {
+        wordPos  = options.find_first_not_of(' ', spacePos);
+        spacePos = options.find(' ', wordPos);
+        if ( wordPos == std::string::npos)
+        {
+            if ( !key.empty() )
+            {
+                m_options[key] = "true";
+
+            }
+            break;
+        }
+
+        if (key.empty())
+        {
+            if (options.at(wordPos) != '-')
+            {
+                //TODO error
+                break;
+            }
+
+            key = options.substr(wordPos + 1, spacePos - wordPos - 1);
+        }
+        else
+        {
+            value = options.substr(wordPos, spacePos - wordPos);
+            m_options[key] = value;
+            key.clear();
+            value.clear();
+        }
+    }
+}
+
+const std::unordered_map<std::string, std::string>& Options::GetOptions() const
+{
+    return m_options;
+}
+
+std::string Options::GetOption(const std::string& key) const
+{
+    auto optionIt = m_options.find(key);
+    if ( optionIt != m_options.end() )
+    {
+        return optionIt->second;
+    }
+    return "";
+}

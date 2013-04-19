@@ -25,3 +25,6 @@ set(SRC_DIR "${PROJECT_SOURCE_DIR}/src")
 
 add_executable(simpleTest "${SRC_DIR}/simpleTest.cpp")
 target_link_libraries(simpleTest gmock_main ${CMAKE_THREAD_LIBS_INIT} )
+
+add_executable(optionsTest "${SRC_DIR}/optionsTest.cpp" "${SRC_DIR}/Options.cpp")
+target_link_libraries(optionsTest gmock_main ${CMAKE_THREAD_LIBS_INIT} )
