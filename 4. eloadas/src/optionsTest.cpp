@@ -56,3 +56,55 @@ TEST(OptionTest, OptionWithValueThanBooleanOptionThanOptionWithValue)
     EXPECT_EQ("true", ops.GetOption("overwrite"));
     EXPECT_EQ("/tmp", ops.GetOption("target"));
 }
+
+TEST(OptionTest, OneBooleanOptionExtraSpaceAtTheEnd)
+{
+    Options ops("-overwrite ");
+
+    EXPECT_EQ(1, ops.GetOptions().size());
+    EXPECT_EQ("true", ops.GetOption("overwrite"));
+}
+
+TEST(OptionTest, OneBooleanOptionExtraSpaceInTheBeginning)
+{
+    Options ops(" -overwrite");
+
+    EXPECT_EQ(1, ops.GetOptions().size());
+    EXPECT_EQ("true", ops.GetOption("overwrite"));
+}
+
+TEST(OptionTest, OneOptionWithValueWithExtraSpaces)
+{
+    Options ops("        -source       /usr      ");
+
+    EXPECT_EQ(1, ops.GetOptions().size());
+    EXPECT_EQ("/usr", ops.GetOption("source"));
+}
+
+TEST(OptionTest, TwoOptionsWithValueWithExtraSpaces)
+{
+    Options ops("       -source        /usr        -target      /tmp   ");
+    EXPECT_EQ(2, ops.GetOptions().size());
+    EXPECT_EQ("/usr", ops.GetOption("source"));
+    EXPECT_EQ("/tmp", ops.GetOption("target"));
+}
+
+TEST(OptionTest, IncorrectOptionWithValue)
+{
+    Options ops("target /tmp");
+    EXPECT_EQ(0, ops.GetOptions().size());
+}
+
+TEST(OptionTest, OneOptionWithValueIncorrectOptionIgnored)
+{
+    Options ops("-target /tmp source        /usr");
+    EXPECT_EQ(1, ops.GetOptions().size());
+    EXPECT_EQ("/tmp", ops.GetOption("target"));
+}
+
+TEST(OptionTest, IncorrectOptionIgnoredThanOneOptionWithValue)
+{
+    Options ops("target /tmp -source        /usr");
+    EXPECT_EQ(1, ops.GetOptions().size());
+    EXPECT_EQ("/usr", ops.GetOption("source"));
+}

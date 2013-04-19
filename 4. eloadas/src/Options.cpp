@@ -30,8 +30,8 @@ Options::Options(const std::string& options)
         {
             if (options.at(wordPos) != '-')
             {
-                //TODO error
-                break;
+                //Ignore incorrect part
+                continue;
             }
 
             key = options.substr(wordPos + 1, spacePos - wordPos - 1);
