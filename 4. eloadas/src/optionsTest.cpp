@@ -31,3 +31,28 @@ TEST(OptionTest, TwoOptionsWithValue)
     EXPECT_EQ("/usr", ops.GetOption("source"));
     EXPECT_EQ("/tmp", ops.GetOption("target"));
 }
+
+TEST(OptionTest, OptionWithValueThanBooleanOption)
+{
+    Options ops("-source /usr -overwrite");
+    EXPECT_EQ(2, ops.GetOptions().size());
+    EXPECT_EQ("/usr", ops.GetOption("source"));
+    EXPECT_EQ("true", ops.GetOption("overwrite"));
+}
+
+TEST(OptionTest, BooleanOptionThanOptionWithValue)
+{
+    Options ops("-overwrite -source /usr");
+    EXPECT_EQ(2, ops.GetOptions().size());
+    EXPECT_EQ("/usr", ops.GetOption("source"));
+    EXPECT_EQ("true", ops.GetOption("overwrite"));
+}
+
+TEST(OptionTest, OptionWithValueThanBooleanOptionThanOptionWithValue)
+{
+    Options ops("-target /tmp -overwrite -source /usr");
+    EXPECT_EQ(3, ops.GetOptions().size());
+    EXPECT_EQ("/usr", ops.GetOption("source"));
+    EXPECT_EQ("true", ops.GetOption("overwrite"));
+    EXPECT_EQ("/tmp", ops.GetOption("target"));
+}

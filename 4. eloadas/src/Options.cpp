@@ -22,7 +22,6 @@ Options::Options(const std::string& options)
             if ( !key.empty() )
             {
                 m_options[key] = "true";
-
             }
             break;
         }
@@ -40,9 +39,17 @@ Options::Options(const std::string& options)
         else
         {
             value = options.substr(wordPos, spacePos - wordPos);
-            m_options[key] = value;
-            key.clear();
-            value.clear();
+            if ( value.at(0) == '-' )
+            {
+                m_options[key] = "true";
+                key = value.substr(1);
+            }
+            else
+            {
+                m_options[key] = value;
+                key.clear();
+                value.clear();
+            }
         }
     }
 }
