@@ -14,6 +14,8 @@ public:
     const std::unordered_map<std::string, std::string>& GetOptions() const;
     std::string GetOption(const std::string& key) const;
 
+    Options& Add(const Options& other);
+
 private:
     std::unordered_map<std::string, std::string> m_options;
 };

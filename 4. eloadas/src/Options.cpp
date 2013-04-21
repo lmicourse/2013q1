@@ -68,3 +68,13 @@ std::string Options::GetOption(const std::string& key) const
     }
     return "";
 }
+
+Options& Options::Add(const Options &other)
+{
+    for( auto item: other.GetOptions())
+    {
+        m_options[item.first] = item.second;
+    }
+
+    return *this;
+}
