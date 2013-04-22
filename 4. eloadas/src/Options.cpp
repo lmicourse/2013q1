@@ -54,6 +54,11 @@ Options::Options(const std::string& options)
     }
 }
 
+Options::Options(const std::unordered_map<std::string, std::string> &options)
+{
+    m_options.insert(options.begin(), options.end());
+}
+
 const std::unordered_map<std::string, std::string>& Options::GetOptions() const
 {
     return m_options;

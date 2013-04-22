@@ -7,9 +7,8 @@
 class Options
 {
 public:
-    Options(const std::string& options);
-    //Options(const char* options);
-    //Options(const char* options[]);
+    explicit Options(const std::string& options);
+    explicit Options(const std::unordered_map<std::string, std::string>& options);
 
     const std::unordered_map<std::string, std::string>& GetOptions() const;
     std::string GetOption(const std::string& key) const;
