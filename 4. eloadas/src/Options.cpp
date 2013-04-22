@@ -54,6 +54,11 @@ Options::Options(const std::string& options)
     }
 }
 
+Options::Options(const std::unordered_map<std::string, std::string> &options)
+{
+    m_options.insert(options.begin(), options.end());
+}
+
 const std::unordered_map<std::string, std::string>& Options::GetOptions() const
 {
     return m_options;
@@ -67,4 +72,14 @@ std::string Options::GetOption(const std::string& key) const
         return optionIt->second;
     }
     return "";
+}
+
+Options& Options::Add(const Options &other)
+{
+    for( auto item: other.GetOptions())
+    {
+        m_options[item.first] = item.second;
+    }
+
+    return *this;
 }
