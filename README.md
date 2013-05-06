@@ -1,4 +1,8 @@
-Update:
+Házi feladatok
+======
+A házikat [itt](https://github.com/lmicourse/2013q1/wiki/Házi-feladat) találjátok.
+
+Fejlesztői környezet
 ======
 
 Hogy megoldjuk a fejlesztő környezet hiányát összeállítottunk egy image fájlt, amiről bebootolhatók az informatoriumban a gépek.
