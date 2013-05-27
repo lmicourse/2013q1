@@ -2,17 +2,20 @@
 
 int main()
 {
-    int* p = NULL;
-    int a=2;
+    int* nullPointer = NULL;
+    int evenNumber=2;
+    int neverUsed=evenNumber;
+    bool wideScopeVariable;
 
-    if (a%2 == 1)
+    if (evenNumber%2 == 1)
     {
-        p = new int[a];
+        wideScopeVariable = true;
+        nullPointer = new int[evenNumber];
     }
 
-    p[a-1]=a;
+    nullPointer[evenNumber-1]=evenNumber;
 
-    delete p;
+    delete nullPointer;
 
     return 0;
 }
